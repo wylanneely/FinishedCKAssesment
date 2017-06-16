@@ -41,7 +41,6 @@ class Contact {
     }
     
     init?(CKRecord: CKRecord) {
-        
         guard let name = CKRecord[kName] as? String,
             let email = CKRecord[kEmail] as? String,
             let phoneNumber = CKRecord[kPhoneNumber] as? String,
@@ -51,12 +50,10 @@ class Contact {
         self.email = email
         self.phoneNumber = phoneNumber
         self.cKRecordIdString = cKRecordIdString
-        
     }
     
     //MARK: - Keys
     static let cKRecordTypeKey = "Contact"
-    
     private let kName = "name"
     private let kPhoneNumber = "phoneNumber"
     private let kEmail = "email"
